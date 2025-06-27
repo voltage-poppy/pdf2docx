@@ -15,9 +15,9 @@ English | [中文](README_CN.md)
 ## Installation
 
 ```shell
-pip install git+git://github.com/voltage-poppy/pdf2docx.git
+pip install git+https://github.com/voltage-poppy/pdf2docx.git
 # or
-uv tool install git+git://github.com/voltage-poppy/pdf2docx.git 
+uv tool install git+https://github.com/voltage-poppy/pdf2docx.git 
 ```
 
 ## Features
