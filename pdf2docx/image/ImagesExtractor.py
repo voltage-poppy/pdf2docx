@@ -263,12 +263,19 @@ class ImagesExtractor:
         """
         if image.colorspace.n > 3:  # must convert: we only support PNG
             image = fitz.Pixmap(fitz.csRGB, image)
+        try:
+            image_data = image.tobytes()
+        except Exception as e:
+            from PIL import Image
+            dummy_img = Image.new("RGB", (image.width, image.height), (99, 99, 99))
+            image_data = dummy_img.tobytes()
+            print("[WARN] Printing a dummy image.")
         return {
             "type": BlockType.IMAGE.value,
             "bbox": tuple(bbox),
             "width": image.width,
             "height": image.height,
-            "image": image.tobytes(),
+            "image": image_data,
         }
 
     @staticmethod

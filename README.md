@@ -12,6 +12,14 @@ English | [中文](README_CN.md)
 - Parse layout with rule, e.g. sections, paragraphs, images and tables
 - Generate docx with `python-docx`
 
+## Installation
+
+```shell
+pip install git+git://github.com/voltage-poppy/pdf2docx.git
+# or
+uv tool install git+git://github.com/voltage-poppy/pdf2docx.git 
+```
+
 ## Features
 
 - Parse and re-create page layout
